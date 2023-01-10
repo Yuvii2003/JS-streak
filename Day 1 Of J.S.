@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Introduction to JavaScript</h1>
+    <script>
+      // variables
+      // variables can be declared with var, let, const
+
+      // strings
+      var a = "Novels";
+      document.write(a);
+      console.log("I love to read " + a);
+
+      // integers
+      var n1 = 10;
+      var n2 = 15;
+      var n3 = 20;
+      var sum = n1 + n2 + n3;
+      console.log("The sum of n1, n2 and n3 is " + sum);
+
+      // float
+      var n4 = 45.35;
+      var n5 = 69.33;
+      var multiply = n4 * n5;
+      console.log("The difference between numbers is " + multiply);
+
+      // boolean
+      var num5 = 17; //-->single equal sign assigns the value to a variable
+      var num6 = "17";
+      console.log(n6 == n7); //-->double equals sign compares the values of variables without comparing the data types of both variables
+      console.log(n6 === n7);//-->triple equals sign compares the values of variables as well as the data types of both variables
+    </script>
+  </body>
+</html>
