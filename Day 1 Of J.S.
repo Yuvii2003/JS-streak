@@ -28,7 +28,7 @@
       var n4 = 45.35;
       var n5 = 69.33;
       var multiply = n4 * n5;
-      console.log("The difference between numbers is " + multiply);
+      console.log("The product between numbers is " + multiply);
 
       // boolean
       var num5 = 17; //-->single equal sign assigns the value to a variable
