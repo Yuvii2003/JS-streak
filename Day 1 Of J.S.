@@ -31,8 +31,8 @@
       console.log("The product between numbers is " + multiply);
 
       // boolean
-      var num5 = 17; //-->single equal sign assigns the value to a variable
-      var num6 = "17";
+      var n6 = 17; //-->single equal sign assigns the value to a variable
+      var n7 = "17";
       console.log(n6 == n7); //-->double equals sign compares the values of variables without comparing the data types of both variables
       console.log(n6 === n7);//-->triple equals sign compares the values of variables as well as the data types of both variables
     </script>
