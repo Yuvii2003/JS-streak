@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function--> A set of code will be executed whenever we call it.
+        function example(){
+            console.log("I'm good at gaming.");
+        }
+        example();
+        // function with parameters
+        function calc(num1,num2){
+            console.log("The product of num1 and num2 is: "+(num1*num2));
+        }
+        calc(12,9);
+        calc("Yuvraj","Kewalramani");
+        // for loop
+        function e1(){
+            for( a=0;a<=18;a++){
+                console.log("I'm good at Valorant and PUBG.");
+            }
+        }
+        e1();
+        // conditional statements
+        function compare(){
+            var a=parseInt(prompt("Enter the first number: "));
+            var b=parseInt(prompt("Enter the second number: "));
+            if(a<b){
+            console.log("First number is lesser than second.");
+            }
+            else{
+                console.log("Second number is Lesser than first.");
+            }
+        }
+        compare();
+        // To get Input from user we use Prompt keyword. 
+        function div(){
+            var x=prompt("Enter the first number: ");
+            var y=prompt("Enter the second number: ");
+            console.log(x/y);
+        }
+        multi();
+        function sub(){
+            var x1=parseInt(prompt("Enter the first number: "));
+            var y1=parseInt(prompt("Enter the second number: "));
+            console.log(x1-y1);
+        }
+        sum();
+        function string(){
+            s = prompt("Enter your favourite novel: ");
+            console.log("My favourite novel is: "+s);
+        }
+        string();
+    </script>
+</body>
+</html>
