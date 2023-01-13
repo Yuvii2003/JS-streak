@@ -13,43 +13,42 @@
             var b1=prompt("Enter the 2nd number to add: ");
             console.log("The sum of the given numbers is: "+(a1+b1));
         }
-        function subs(){
-            var a2=prompt("Enter the 1st number: ");
-            var b2=prompt("Enter the 2nd number: ");
-            console.log("The difference between numbers is: "+(a2-b2));
+             function multi(){
+            var a2=prompt("Enter the 1st number to multiply: ");
+            var b2=prompt("Enter the 2nd number to multiply: ");
+            console.log("The multipliction of numbers is: "+(a2*b2));
         }
-        function multi(){
-            var a3=prompt("Enter the 1st number to multiply: ");
-            var b3=prompt("Enter the 2nd number to multiply: ");
-            console.log("The multipliction of numbers is: "+(a3*b3));
-        }
-        function divide(){
+       function subs(){
+            var a3=prompt("Enter the 1st number: ");
+            var b3=prompt("Enter the 2nd number: ");
+            console.log("The difference between numbers is: "+(a3-b3));
+        }
+       function divide(){
             var a4=prompt("Enter the 1st number: ");
             var b4=prompt("Enter the 2nd number: ");
             console.log("The division between numbers is: "+(a4/b4));
         }
           function log(){
             var a5=prompt("Enter the number to get natural log: ");
-            console.log(Math.log(a15));
+            console.log(Math.log(a5));
         }
         function anti(){
             var a6=prompt("Enter a number to get antilog: ");
-            console.log(Math.exp(a));
+            console.log(Math.exp(a6));
         }
         function power(){
             var a7=prompt("Enter the number: ");
-            a9=Number.parseInt(a9);
-            a10=Number.parseInt(a10);
-            var a10=prompt("Enter the power: ");
-            console.log(a9**a10);
+            a7=Number.parseInt(a7);
+            a8=Number.parseInt(a8);
+            var a8=prompt("Enter the power: ");
+            console.log(a7**a8);
         }
         sum();
         subs();
         multi();
         divide();
-        sine();
-        cosine();
-        tan();
+        log();
+        anti();
         sqrt();
         power();
     </script>
