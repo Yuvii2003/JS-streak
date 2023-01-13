@@ -43,6 +43,10 @@
             var a8=prompt("Enter the power: ");
             console.log(a7**a8);
         }
+        function sqrt(){
+            var a9=prompt("Enter the number to get squareroot of that: ");
+            console.log(Math.sqrt(a9));
+        }
         sum();
         subs();
         multi();
