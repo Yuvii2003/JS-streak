@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        // creating array
+        const cars = ["Chevrolet Camaro", "Austin Healey 3000", "DeTomaso", "Mini Cooper"];
+        document.getElementById("demo").innerHTML = cars;
+        // accessing array element
+        document.getElementById("demo").innerHTML = cars[0];
+        // changing array element
+        document.getElementById("demo").innerHTML = cars;
+        cars[0] = "Rolls Royce";
+        // length of array
+        document.getElementById("demo").innerHTML = cars.length;
+    </script>
+</body>
+</html>
