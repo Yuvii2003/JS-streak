@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="fru"></p>
+    <script>
+        // creating array
+        const fruits = ["Orange", " Kiwi", " Mango"];
+        document.getElementById("fru").innerHTML = fruits;
+        // accessing array element
+        document.getElementById("fru").innerHTML = fruits[0];
+        // changing array element
+        document.getElementById("fru").innerHTML = fruits;
+        fruits[2] = " Banana";
+        // length of array
+        document.getElementById("fru").innerHTML = fruits.length;
+        document.write(fruits.length);
+        document.getElementById("fru").innerHTML = fruits;
+    </script>
+</body>
+</html>
