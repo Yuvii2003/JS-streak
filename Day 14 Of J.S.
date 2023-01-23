@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkDate(){
+            var date1="12/3/16";
+            var date2="4/5/18";
+            var date=document.getElementById("demo").value;
+            var d1=date1.split("/");
+            var d2=date2.split("/");
+            var d=date.split("/");
+            var date1=new Date(d1[2].parseInt(d1[1],d1[0]));
+            var date2=new Date(d2[2].parseInt(d2[1],d2[0]));
+            var date=new Date(d[2].parseInt(d[1],d[0]));
+            console.log("$(date1),$(date2),$(date)");
+            if(date[1]>12||date[2]>31){
+                alert("Please enter a valid date");
+
+            }
+            else if(date<date2&&date>date1){
+                alert("Entered date is between the given dates");
+                
+            }
+            else{
+                document.write("Sorry, entered date is not between the given dates")
+
+            }
+
+        }
+    </script>
+    <p>Enter your date:<input id="demo"></p>
+    <button type="button" onclick="checkDate()">Check Date</button>
+</body>
+</html>
