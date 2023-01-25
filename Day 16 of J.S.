@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color Game</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      body {
+        background-color: beige;
+        font-family: "Raleway", Sans-serif;
+        font-size: 62.5%; /*1 em = 10px */
+        margin: 0;
+      }
+
+      #container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding-top: 20px;
+      }
+      .square {
+        width: 30%;
+        background-color: aqua;
+        padding-bottom: 30%;
+        float: left;
+        margin: 1.66%;
+        transition: background 0.5s;
+        -webkit-transition: background 0.5s;
+        -moz-transition: background 0.5s;
+        -o-transition: background 0.5s;
+      }
+
+      h1 {
+        color: white;
+        background-color: #2c8e99;
+        font-size: 3.5em;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 10px 0;
+      }
+
+      #color-display {
+        display: block;
+        font-size: 2em;
+      }
+
+      #stripe {
+        background: white;
+        height: 30px;
+        text-align: center;
+        color: black;
+      }
+
+      #message {
+        text-transform: uppercase;
+        color: #2c8e99;
+        font-size: 1.5em;
+        display: inline-block;
+        width: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The Great <span id="color-display">RGB</span> Guessing Game</h1>
+    <div id="stripe">
+      <button id="reset">New Colors</button>
+      <span id="message"></span>
+      <button class="mode">Easy</button>
+      <button class="mode selected">Hard</button>
+    </div>
+    <div id="container">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+
+    <script>
+      var numSquares = 6;
+      var colors = [];
+      var pickedColor;
+
+      var squares = document.querySelectorAll(".square");
+      var colorDisplay = document.querySelector("#color-display");
+      var messageDisplay = document.querySelector("#message");
+      var h1 = document.querySelector("h1");
+      var resetButton = document.querySelector("#reset");
+      var modeButtons = document.querySelectorAll(".mode");
+      var easyButton = document.querySelector(".mode");
+
+      init();
+
+      function init() {
+        colorDisplay.textContent = pickedColor;
+        setupSquares();
+        setupMode();
+        reset();
+      }
+
+      resetButton.addEventListener("click", function () {
+        reset();
+      });
+
+      function setupSquares() {
+        for (var i = 0; i < squares.length; i++) {
+          squares[i].style.backgroundColor = colors[i];
+          squares[i].addEventListener("click", function () {
+            var clickedColor = this.style.backgroundColor;
+            if (clickedColor === pickedColor) {
+              messageDisplay.textContent = "Correct";
+              resetButton.textContent = "Play Again";
+              changeColors(pickedColor);
+            } else {
+              this.style.backgroundColor = "#232323";
+              messageDisplay.textContent = "try again";
+            }
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
