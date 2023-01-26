@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Game</title>
+    <style>
+        body {
+            background-color: burlywood;
+            font-family: Arial, sans-serif;
+        }
+
+        #clock {
+            width: 50%;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: lemonchiffon;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+        #time {
+            font-size: 75px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        #location {
+            font-size: 30px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        #city-select {
+            font-size: 30px;
+            padding: 10px;
+            width: 100%;
+            background-color: burlywood;
+            border: none;
+            box-shadow: 0px 0px 5px #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock">
+        <div id="time"></div>
+        <div id="location"></div>
+        <select id="city-select"></select>
+    </div>
+
+    <script>
+        const timeDisplay = document.getElementById("time");
+        const locationDisplay = document.getElementById("location");
+        const citySelect = document.getElementById("city-select");
+        const cities = [
+            { name: "Mumbai", offset: 5.5 },
+            { name: "Berlin", offset: 1 },
+            { name: "Dubai", offset: 4 },
+            { name: "London", offset: 0 },
+            { name: "Lusaka", offset: 2 },  
+            { name: "New York", offset: -5 },
+            { name: "Rio", offset: -3 }, 
+            { name: "Sydney", offset: 11 },
+            { name: "Tokyo", offset: 9 },        
+        ];
+        function updateTime() {
+            const date = new Date();
+            const offset = parseFloat(citySelect.value) * 60 * 60 * 1000;
+            date.setTime(date.getTime() + offset);
+            let hours = date.getUTCHours();
+            let minutes = date.getUTCMinutes();
+            let seconds = date.getUTCSeconds();
+
+            if (hours < 10) {
+                hours = `0${hours}`;
+            }
+            if (minutes < 10) {
+                minutes = `0${minutes}`;
+            }
+            if (seconds < 10) {
+                seconds = `0${seconds}`;
+            }
+            timeDisplay.innerHTML = `${hours}:${minutes}:${seconds}`;
+        }
+        function populateCities() {
+            for (let i = 0; i < cities.length; i++) {
+                const option = document.createElement("option");
+                option.value = cities[i].offset;
+                option.innerHTML = cities[i].name;
+                citySelect.appendChild(option);
+            }
+        }
+        function updateLocation() {
+            for (let i = 0; i < cities.length; i++) {
+                if (citySelect.value === cities[i].offset) {
+                    locationDisplay.innerHTML = cities[i].name;
+                    break;
+                }
+            }
+        }
+        populateCities();
+        updateLocation();
+        setInterval(updateTime, 1000);
+        citySelect.addEventListener("change", updateLocation);
+    </script>
+</body>
+</html>
