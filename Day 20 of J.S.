@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Day20.css" />
+    <style>
+        #a {
+            grid-area: a1;
+        }
+
+        #b {
+            grid-area: b1;
+        }
+
+        #c {
+            grid-area: c1;
+        }
+
+        #d {
+            grid-area: d1;
+        }
+
+        #e {
+            grid-area: e1;
+        }
+
+        #f {
+            grid-area: f1;
+        }
+
+        #g {
+            grid-area: g1;
+        }
+
+        #h {
+            grid-area: h1;
+        }
+
+        #i {
+            grid-area: i1;
+        }
+
+        #j {
+            grid-area: j1;
+        }
+
+        #k {
+            grid-area: k1;
+        }
+
+        #l {
+            grid-area: l1;
+        }
+
+        #m {
+            grid-area: m1;
+        }
+
+        #n {
+            grid-area: n1;
+        }
+
+        #o {
+            grid-area: o1;
+        }
+
+        #p {
+            grid-area: p1;
+        }
+
+        #q {
+            grid-area: q1;
+        }
+
+        #r {
+            grid-area: r1;
+        }
+
+        #s {
+            grid-area: s1;
+        }
+
+        #t {
+            grid-area: t1;
+        }
+
+        .main {
+            display: grid;
+            grid-template-areas:
+                "a1 b1 c1 d1 e1"
+                "f1 g1 h1 i1 j1"
+                "k1 l1 m1 n1 o1"
+                "p1 q1 r1 s1 t1";
+            padding: 20px;
+            text-align: center;
+            border-style: outset;
+            border-color: aqua;
+        }
+
+        body {
+            background-color: cadetblue;
+        }
+
+        h1 {
+            color: orangered;
+            text-align: center;
+        }
+
+        .xx {
+            margin: 30px;
+        }
+
+        .navbut {
+            border-radius: 4px;
+            background-color: gainsboro;
+            border: none;
+            color: #ffffff;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .navbut .sp {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .navbut .sp:after {
+            content: "\00bb";
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .navbut:hover .sp {
+            padding-right: 25px;
+            color: cornflowerblue;
+        }
+
+        .navbut:hover .sp:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .sp {
+            color: midnightblue;
+            font-size: 18px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Click on links to view GitHub repository</h1>
+    <div class="main">
+        <div id="a" class="xx">
+            <a href="#" class="navbut" onclick="p1()"><span class="sp">Day1</span></a>
+        </div>
+        <div id="b" class="xx">
+            <a href="#" class="navbut" onclick="p2()"><span class="sp">Day2</span></a>
+        </div>
+        <div id="c" class="xx">
+            <a href="#" class="navbut" onclick="p3()"><span class="sp">Day3</span></a>
+        </div>
+        <div id="d" class="xx">
+            <a href="#" class="navbut" onclick="p4()"><span class="sp">Day4</span></a>
+        </div>
+        <div id="e" class="xx">
+            <a href="#" class="navbut" onclick="p5()"><span class="sp">Day5</span></a>
+        </div>
+        <div id="f" class="xx">
+            <a href="#" class="navbut" onclick="p6()"><span class="sp">Day6</span></a>
+        </div>
+        <div id="g" class="xx">
+            <a href="#" class="navbut" onclick="p7()"><span class="sp">Day7</span></a>
+        </div>
+        <div id="h" class="xx">
+            <a href="#" class="navbut" onclick="p8()"><span class="sp">Day8</span></a>
+        </div>
+        <div id="i" class="xx">
+            <a href="#" class="navbut" onclick="p9()"><span class="sp">Day9</span></a>
+        </div>
+        <div id="j" class="xx">
+            <a href="#" class="navbut" onclick="p10()"><span class="sp">Day10</span></a>
+        </div>
+        <div id="k" class="xx">
+            <a href="#" class="navbut" onclick="p11()"><span class="sp">Day11</span></a>
+        </div>
+        <div id="l" class="xx">
+            <a href="#" class="navbut" onclick="p12()"><span class="sp">Day12</span></a>
+        </div>
+        <div id="m" class="xx">
+            <a href="#" class="navbut" onclick="p13()"><span class="sp">Day13</span></a>
+        </div>
+        <div id="n" class="xx">
+            <a href="#" class="navbut" onclick="p14()"><span class="sp">Day14</span></a>
+        </div>
+        <div id="o" class="xx">
+            <a href="#" class="navbut" onclick="p15()"><span class="sp">Day15</span></a>
+        </div>
+        <div id="p" class="xx">
+            <a href="#" class="navbut" onclick="p16()"><span class="sp">Day16</span></a>
+        </div>
+        <div id="q" class="xx">
+            <a href="#" class="navbut" onclick="p17()"><span class="sp">Day17</span></a>
+        </div>
+        <div id="r" class="xx">
+            <a href="#" class="navbut" onclick="p18()"><span class="sp">Day18</span></a>
+        </div>
+        <div id="s" class="xx">
+            <a href="#" class="navbut" onclick="p19()"><span class="sp">Day19</span></a>
+        </div>
+        <div id="t" class="xx">
+            <a href="#" class="navbut" onclick="p20()"><span class="sp">Day20</span></a>
+        </div>
+    </div>
+    <script>
+        function p1() {
+            let text = "Do you wish to continue to Day1";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%201%20Of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p2() {
+            let text = "Do you wish to continue to Day2";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%202%20Of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p3() {
+            let text = "Do you wish to continue to Day3";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%203%20Of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p4() {
+            let text = "Do you wish to continue to Day4";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%204%20Of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p5() {
+            let text = "Do you wish to continue to Day5";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%205%20Of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p6() {
+            let text = "Do you wish to continue to Day6";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%206%20of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p7() {
+            let text = "Do you wish to continue to Day7";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%207%20Of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p8() {
+            let text = "Do you wish to continue to Day8";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%208%20Of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p9() {
+            let text = "Do you wish to continue to Day9";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%209%20Of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p10() {
+            let text = "Do you wish to continue to Day10";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%2010%20Of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p11() {
+            let text = "Do you wish to continue to Day11";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%2011%20Of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p12() {
+            let text = "Do you wish to continue to Day12";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%2012%20Of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p13() {
+            let text = "Do you wish to continue to Day13";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%2013%20Of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p14() {
+            let text = "Do you wish to continue to Day14";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%2014%20Of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p15() {
+            let text = "Do you wish to continue to Day15";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%2015%20Of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p16() {
+            let text = "Do you wish to continue to Day16";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%2016%20of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p17() {
+            let text = "Do you wish to continue to Day17";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%2017%20of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p18() {
+            let text = "Do you wish to continue to Day18";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%2018%20of%20J.S.%20(1)";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p19() {
+            let text = "Do you wish to continue to Day19";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%2019%20Of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+        function p20() {
+            let text = "Do you wish to continue to Day20";
+            if (confirm(text) == true) {
+                window.location = "https://github.com/Yuvii2003/JS-streak/blob/main/Day%2020%20Of%20J.S.";
+            }
+            else {
+                alert("Hope to see you soon.")
+                return none;
+            }
+        }
+    </script>
+</body>
+
+</html>
